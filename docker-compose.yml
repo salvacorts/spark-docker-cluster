@@ -1,0 +1,56 @@
+# docker stack deploy -c docker-compose.yml spark_cluster
+# docker stack services spark_cluster
+# docker stack rm spark_cluster
+
+version: "3.9"
+
+services:
+    master:
+        build: 
+            context: ./
+            dockerfile: ./master.dockerfile
+        image: salvacorts/spark-master
+        user: spark
+        ports:
+            - "7077:7077"
+            - "8080:8080"
+        networks:
+            - cluster
+        volumes:
+            - ./data:/data
+          
+
+    worker:
+        build: 
+            context: ./
+            dockerfile: ./worker.dockerfile
+        user: spark
+        command: -c 1 -m 1024M
+        environment: 
+            - SPARK_MASTER=spark://master:7077
+        depends_on:
+            - master
+        deploy:
+            replicas: 4
+        networks:
+            - cluster
+        volumes:
+            - ./data:/data
+
+    # Auxiliar containers
+    # Attach: docker attach <container name, use dockr ps>
+    # Run Spark Shell: spark-shell --master $SPARK_MASTER
+    # Run Spark Submit: spark-submit --master $SPARK_MASTER --class SimpleApp ./target/scala-2.12/helloworld-application_2.12_1.0.jar
+    shell:
+        image: salvacorts/spark-base
+        user: spark
+        environment:
+            - SPARK_MASTER=spark://master:7077
+        networks:
+            - cluster
+        volumes:
+            - ./data:/data
+
+networks:
+    cluster:
+              
