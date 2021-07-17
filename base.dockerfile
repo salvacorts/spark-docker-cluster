@@ -7,7 +7,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 # Install dependencies
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update
-RUN apt install -y openjdk-11-jdk scala git wget curl gnupg2
+RUN apt install -y openjdk-8-jdk scala git wget curl gnupg2
 
 # SBT repo
 RUN echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" | tee /etc/apt/sources.list.d/sbt.list
@@ -17,8 +17,8 @@ RUN apt update
 RUN apt install -y sbt
 
 # Install and configure Spark 
-ENV SPARK_VERSION=3.0.1
-ENV HADOOP_VERSION=2.7
+ENV SPARK_VERSION=3.1.2
+ENV HADOOP_VERSION=3.2
 
 RUN wget -q https://downloads.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz \
             -O /tmp/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz
@@ -30,3 +30,10 @@ ENV PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 
 # Create non-root user
 RUN useradd -ms /bin/bash spark
+
+# For any local dependency
+USER spark
+RUN mkdir -p home/spark/.ivy2
+VOLUME /home/spark/.ivy2/local
+
+USER root
