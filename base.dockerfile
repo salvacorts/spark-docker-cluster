@@ -34,6 +34,6 @@ RUN useradd -ms /bin/bash spark
 # For any local dependency
 USER spark
 RUN mkdir -p home/spark/.ivy2
-VOLUME /home/spark/.ivy2/local
+VOLUME /home/spark/.ivy2
 
 USER root

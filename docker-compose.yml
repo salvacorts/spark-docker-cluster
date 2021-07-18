@@ -17,7 +17,7 @@ services:
         networks:
             - cluster
         volumes:
-            - ./data:/data
+            - ..:/workspace
           
 
     worker:
@@ -35,7 +35,7 @@ services:
         networks:
             - cluster
         volumes:
-            - ./data:/data
+            - ..:/workspace
 
     # Auxiliar containers
     # Attach: docker attach <container name, use dockr ps>
@@ -49,7 +49,7 @@ services:
         networks:
             - cluster
         volumes:
-            - ./data:/data
+            - ..:/workspace
 
 networks:
     cluster:
