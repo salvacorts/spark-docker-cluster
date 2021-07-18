@@ -1,0 +1,3 @@
+[submodule "spark-knn"]
+	path = spark-knn
+	url = https://github.com/salvacorts/spark-knn.git
