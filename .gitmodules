@@ -1,3 +1,6 @@
 [submodule "spark-knn"]
 	path = spark-knn
 	url = https://github.com/salvacorts/spark-knn.git
+[submodule "Spark-INFFC"]
+	path = Spark-INFFC
+	url = https://github.com/salvacorts/Spark-INFFC.git
