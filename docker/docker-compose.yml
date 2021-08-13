@@ -6,7 +6,7 @@ version: "3.9"
 
 services:
     master:
-        build: 
+        build:
             context: ./
             dockerfile: ./master.dockerfile
         image: salvacorts/spark-master
@@ -18,15 +18,14 @@ services:
             - cluster
         volumes:
             - ..:/workspace
-          
 
     worker:
-        build: 
+        build:
             context: ./
             dockerfile: ./worker.dockerfile
         user: spark
-        command: -c 1 -m 1024M
-        environment: 
+        command: -c 2 -m 3072M
+        environment:
             - SPARK_MASTER=spark://master:7077
         depends_on:
             - master
@@ -53,4 +52,3 @@ services:
 
 networks:
     cluster:
-              
