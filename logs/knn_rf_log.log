@@ -1,0 +1,71 @@
+Noise percentage: 0.2
+Loading susy dataset from:
+        Train: hdfs:///user/datasets/master/susy/susyMaster-Train.data
+        Test: hdfs:///user/datasets/master/susy/susyMaster-Test.data
+SUSY Train size: 1000000 instances
+SUSY Test size: 1000000 instances
+Noisy train: Accuracy=0.7859322147540463 -- F1=0.7859322147540463
+Noisy test: Accuracy=0.8441894367143467 -- F1=0.8441894367143467
+21/08/16 20:50:37 DEBUG noise.INFFC: Original size: 1000000
+21/08/16 20:50:37 DEBUG noise.INFFC: New iteration
+21/08/16 20:51:21 DEBUG noise.INFFC: Trained voting ensemble on noisy set
+21/08/16 20:51:21 DEBUG noise.INFFC: Done with Preliminary Noise Filtering
+21/08/16 20:58:03 DEBUG noise.INFFC: Trained voting ensemble on noise-free set
+21/08/16 21:00:51 DEBUG noise.INFFC: done with KNN
+21/08/16 21:00:51 DEBUG noise.INFFC: NS Computed
+21/08/16 21:00:51 DEBUG noise.INFFC: Done with Noise-Free Filtering
+21/08/16 21:53:25 DEBUG noise.INFFC: 244904 noisy examples removed
+21/08/16 21:53:25 DEBUG noise.INFFC: Resetting stop iterations counter
+21/08/16 21:53:25 DEBUG noise.INFFC: New iteration
+21/08/16 21:54:37 DEBUG noise.INFFC: Trained voting ensemble on noisy set
+21/08/16 21:54:37 DEBUG noise.INFFC: Done with Preliminary Noise Filtering
+21/08/16 22:00:43 DEBUG noise.INFFC: Trained voting ensemble on noise-free set
+21/08/16 22:03:17 DEBUG noise.INFFC: done with KNN
+21/08/16 22:03:18 DEBUG noise.INFFC: NS Computed
+21/08/16 22:03:18 DEBUG noise.INFFC: Done with Noise-Free Filtering
+21/08/16 22:37:12 DEBUG noise.INFFC: 18505 noisy examples removed
+21/08/16 22:37:12 INFO noise.INFFC: Iteration 1 out of 3 with samples bellow threshold
+21/08/16 22:37:12 DEBUG noise.INFFC: N. noisy: 18505 - N. threshold: 20000.0
+21/08/16 22:37:12 DEBUG noise.INFFC: New iteration
+21/08/16 22:38:19 DEBUG noise.INFFC: Trained voting ensemble on noisy set
+21/08/16 22:38:19 DEBUG noise.INFFC: Done with Preliminary Noise Filtering
+21/08/16 22:43:44 DEBUG noise.INFFC: Trained voting ensemble on noise-free set
+21/08/17 00:13:43 DEBUG noise.INFFC: Done with Noise-Free Filtering
+21/08/17 01:01:23 DEBUG noise.INFFC: 245079 noisy examples removed
+21/08/17 01:01:23 DEBUG noise.INFFC: Resetting stop iterations counter
+21/08/17 01:01:23 DEBUG noise.INFFC: New iteration
+21/08/17 01:02:33 DEBUG noise.INFFC: Trained voting ensemble on noisy set
+21/08/17 01:02:33 DEBUG noise.INFFC: Done with Preliminary Noise Filtering
+21/08/17 01:08:37 DEBUG noise.INFFC: Trained voting ensemble on noise-free set
+21/08/17 01:11:18 DEBUG noise.INFFC: done with KNN
+21/08/17 01:11:19 DEBUG noise.INFFC: NS Computed
+21/08/17 01:11:19 DEBUG noise.INFFC: Done with Noise-Free Filtering
+21/08/17 02:13:25 DEBUG noise.INFFC: 18118 noisy examples removed
+21/08/17 02:13:25 INFO noise.INFFC: Iteration 1 out of 3 with samples bellow threshold
+21/08/17 02:13:25 DEBUG noise.INFFC: N. noisy: 18118 - N. threshold: 20000.0
+21/08/17 02:13:25 DEBUG noise.INFFC: New iteration
+21/08/17 02:14:33 DEBUG noise.INFFC: Trained voting ensemble on noisy set
+21/08/17 02:14:33 DEBUG noise.INFFC: Done with Preliminary Noise Filtering
+21/08/17 02:19:40 DEBUG noise.INFFC: Trained voting ensemble on noise-free set
+21/08/17 02:22:20 DEBUG noise.INFFC: done with KNN
+21/08/17 02:22:20 DEBUG noise.INFFC: NS Computed
+21/08/17 02:22:20 DEBUG noise.INFFC: Done with Noise-Free Filtering
+21/08/17 03:14:50 DEBUG noise.INFFC: 1918 noisy examples removed
+21/08/17 03:14:50 INFO noise.INFFC: Iteration 2 out of 3 with samples bellow threshold
+21/08/17 03:14:50 DEBUG noise.INFFC: N. noisy: 1918 - N. threshold: 20000.0
+21/08/17 03:14:50 DEBUG noise.INFFC: New iteration
+21/08/17 03:16:01 DEBUG noise.INFFC: Trained voting ensemble on noisy set
+21/08/17 03:16:01 DEBUG noise.INFFC: Done with Preliminary Noise Filtering
+21/08/17 03:20:40 DEBUG noise.INFFC: Trained voting ensemble on noise-free set
+21/08/17 03:23:21 DEBUG noise.INFFC: done with KNN
+21/08/17 03:23:22 DEBUG noise.INFFC: NS Computed
+21/08/17 03:23:22 DEBUG noise.INFFC: Done with Noise-Free Filtering
+21/08/17 04:14:25 DEBUG noise.INFFC: 491 noisy examples removed
+21/08/17 04:14:25 INFO noise.INFFC: Iteration 3 out of 3 with samples bellow threshold
+21/08/17 04:14:25 DEBUG noise.INFFC: N. noisy: 491 - N. threshold: 20000.0
+21/08/17 04:14:25 INFO noise.INFFC: Dataset cleaned
+21/08/17 04:14:26 DEBUG noise.INFFC: Original size: 1000000 - Cleaned size: 734394
+Initial df size: 1000000
+Clean df size: 734394
+Clean train: Accuracy=1.0 -- F1=1.0
+Clean test: Accuracy=0.8552784766367714 -- F1=0.8552784766367714

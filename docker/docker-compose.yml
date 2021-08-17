@@ -38,8 +38,6 @@ services:
 
     # Auxiliar containers
     # Attach: docker attach <container name, use dockr ps>
-    # Run Spark Shell: spark-shell --master $SPARK_MASTER
-    # Run Spark Submit: spark-submit --master $SPARK_MASTER --class SimpleApp ./target/scala-2.12/helloworld-application_2.12_1.0.jar
     shell:
         image: salvacorts/spark-base
         user: spark
